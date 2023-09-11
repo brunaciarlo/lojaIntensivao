@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/gremioIcon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Loja do Grêmio</title>
+</head>
+<body  class="bg-stone-200 flex-col">
+  <section id="carrinho" class="fixed top-0 right-[-360px] bg-sky-600 h-screen w-[360px] text-slate-200 z-50 duration-200 border-l p-5 flex flex-col justify-between">
+    <div id="cabecalho-carrinho" class="flex justify-between m-4">
+      <p>Meu Carrinho</p>
+      <button id="fechar-carrinho"><i class="fa-solid fa-square-xmark"></i></button>
+    </div>
+    <section id="produtos-carrinho" class="h-3/5 overflow-y-auto flex flex-col gap-3"></section>
+    <p id="preco-total" class="bg-slate-200 text-green-800 rounded-sm pl-5">Total: $0</p>
+    <button id="finalizar-compra" class="bg-slate-200 text-slate-900 p-1 hover:bg-slate-900 hover:text-slate-200">Finalizar Compra</button>
+  </section>
+  <header class="flex text-xl bg-sky-600 shadow-lg shadow-slate-400 h-20 justify-between px-8 py-2 sticky top-0 z-10">
+    <a href="./">
+      <img src="./assets/GremioSimbolo.png" alt="Logo do Hashtag" class="h-16">
+    </a>
+    <div class="text-slate-200 flex gap-3 mx-5">
+      <a href="pedidos.html"><button class="m-3 align-middle"><i class="fa-solid fa-user"></i></button></a>
+      <button id="abrir-carrinho" class="mr-2 align-middle"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+  </header>
+  <main class="flex flex-col items-center">
+    <section id="filtros" class="p-10 flex">
+      <div class="px-2">
+        <input id="exibir-todos" type="radio" name="filtro" class="peer hidden" checked/>
+        <label for="exibir-todos" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Todos</label>
+      </div>
+      <div class="px-2">
+        <input id="exibir-uniformes" type="radio" name="filtro" class="peer hidden" />
+        <label for="exibir-uniformes" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Uniformes</label>
+      </div>
+      <div class="px-2">
+        <input id="exibir-outros" type="radio" name="filtro" class="peer hidden" />
+        <label for="exibir-outros" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Outros</label>
+      </div>
+    </section>
+    <section id="container-produto" class="flex flex-wrap p-10 justify-center gap-10"></section>
+  </main>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
